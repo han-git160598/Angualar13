@@ -1,0 +1,33 @@
+<div class="test">
+    <h2>component home</h2>
+    <table class="table2">
+        <tr>
+            <th>
+                stt
+            </th>
+            <th>
+                firstName
+            </th>
+            <th>
+                lastName
+            </th>
+            <th>
+                language
+            </th>
+        </tr>
+        <tr *ngFor="let item of fruit; let i = index">
+            <td>
+                {{i+1}}
+            </td>
+            <td>
+                <span [ngClass]=" {'textRed' : item.firstName === 'John' }">{{item.firstName | currency }}</span>
+            </td>
+            <td>
+                <span>{{item.lastName}}</span>
+            </td>
+            <td>
+                <span>{{item.language}}</span>
+            </td>
+        </tr>
+    </table>
+</div>
